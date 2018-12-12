@@ -3,6 +3,8 @@ title: 'Measure Theory (XVII): Functions of Bounded Variation'
 layout: post
 tag: [measure theory]
 date: 2018-11-23 18:30:01 +0800
+macros: >-
+  "\\Var":"\\operatorname{Var}"
 ---
 
 In the buildup to the analogues of the Fundamental Theorem of Calculus for the Lebesgue integral on $\bb R$, we study two special classes of functions, namely monotone functions and functions of bounded variation. In particular, we look at the derivatives $f'$ and their Lebesgue integrals $\int\\!f'\,d\lambda$, and relate them to the original function $f$.
@@ -127,8 +129,6 @@ $$\begin{aligned}
 as desired. $\qed$
 
 ## Functions of bounded variation
-
-$\gdef{\Var}{\operatorname{Var}}$
 
 Let $f:[a,b]\to\bb R$. The __total variation__ of $f$ on $[a,b]$ is
 

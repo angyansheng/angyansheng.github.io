@@ -60,3 +60,44 @@ https://github.com/gettalong/kramdown/issues/292#issuecomment-313266061 -->
   );
 </script> -->
 {%- endcomment -%}
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      macros: {
+        "’":"&#39;",
+        "\\bb":"\\mathbb",
+        "\\bf":"\\mathbf",
+        "\\mc":"\\mathcal",
+        "\\mf":"\\mathfrak",
+        "\\del":"\\partial",
+        "\\eps":"\\varepsilon",
+        "\\Re":"\\operatorname{Re}",
+        "\\Im":"\\operatorname{Im}",
+        "\\qed":"\\ \\square",
+        {{ page.macros }}
+      },
+      delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+    ]});
+
+    document.querySelectorAll("script[type='math/tex; mode=display']").forEach(function(el) {
+        el.outerHTML = katex.renderToString(el.textContent.replace(/%.*/g, ''), {
+          macros: {
+            "\\bb":"\\mathbb",
+            "\\bf":"\\mathbf",
+            "\\mc":"\\mathcal",
+            "\\mf":"\\mathfrak",
+            "\\del":"\\partial",
+            "\\eps":"\\varepsilon",
+            "\\Re":"\\operatorname{Re}",
+            "\\Im":"\\operatorname{Im}",
+            "\\qed":"\\ \\square",
+            {{ page.macros }}
+      },
+      displayMode: true });
+    });
+});
+</script>

@@ -25,7 +25,7 @@ paginate_path: "page:num"
 
 markdown: kramdown
 kramdown:
-  math_engine: ~
+  math_engine: mathjax
   syntax_highlighter_opts:
     disable: true
 

@@ -3,24 +3,27 @@
   
   {%- include head.html -%}
   
-  {%- if page.math_typeset == "mathjax" -%}
-    {%- include mathjax_support.html -%}
-  {%- endif -%}
-
-  {%- comment -%}
-  <!-- {% if page.math_typeset == "katex" %}
-    $\gdef\bb#1{\mathbb{#1}}$
-    $\gdef\bf#1{\mathbf{#1}}$
-    $\gdef\mc#1{\mathcal{#1}}$
-    $\gdef\del\partial$
-    $\gdef\eps\varepsilon$
-    $\gdef\Re{\operatorname{Re}}$
-    $\gdef\Im{\operatorname{Im}}$
-    $\gdef\qed{\ \square}$
-  {% endif %} -->
-  {%- endcomment -%}
-
   <body>
+
+    {%- if page.math_typeset == "mathjax" -%}
+      {%- include mathjax_support.html -%}
+    {%- endif -%}
+
+    {%- comment -%}
+    {%- if page.math_typeset == "katex" -%}
+      {%- include katex_support.html -%}
+    {%- endif -%}
+    <!-- {% if page.math_typeset == "katex" %}
+      $\gdef\bb#1{\mathbb{#1}}$
+      $\gdef\bf#1{\mathbf{#1}}$
+      $\gdef\mc#1{\mathcal{#1}}$
+      $\gdef\del\partial$
+      $\gdef\eps\varepsilon$
+      $\gdef\Re{\operatorname{Re}}$
+      $\gdef\Im{\operatorname{Im}}$
+      $\gdef\qed{\ \square}$
+    {% endif %} -->
+    {%- endcomment -%}
 
     {%- include sidebar.html -%}
 
@@ -61,11 +64,11 @@
       })(document);
     </script>
 
-    {%- comment -%}
-    <!-- {% if page.math_typeset == "katex" %}
+    {% if page.math_typeset == "katex" %}
       {% include katex_support.html %}
-    {% endif %} -->
+    {% endif %}
 
+    {%- comment -%}
     <!-- <script type="text/javascript">
       WebFontConfig = {
         google: { families: [ 'Lato', 'Lora:400,400i,700' ] }

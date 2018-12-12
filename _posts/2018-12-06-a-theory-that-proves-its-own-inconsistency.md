@@ -4,14 +4,16 @@ layout: post
 category: blog
 tag: []
 date: 2018-12-06 23:00:00 +0800
+macros: >-
+  "\\Con":"\\operatorname{Con}",
 ---
 
 I recently read this [mind-bending blog post by Joel David Hamkins](http://jdh.hamkins.org/every-function-can-be-computable/) that proves this result: there is a Turing machine program $P$ such that for any function $f:\bb N\to\bb N$---possibly uncomputable!---there is a model of Peano arithmetic (PA) in which $P$ computes $f$ on the standard natural numbers. If this statement doesn't surprise you, I'm not sure what else would (except maybe those who work in logic or set theory; I'm convinced that these people routinely [believe as many as six impossible things before breakfast](http://www-history.mcs.st-andrews.ac.uk/Quotations/Dodgson.html)).
 
 A extraordinary claim needs an extraordinary proof, and when I read through Hamkins's argument I came across a lesser absurdity: a theory that proves its own inconsistency. Since all my knowledge of formal logic is from folklore, this post is my attempt to informally explain (to myself, at least) how such a theory can be constructed, and why it is not a contradiction in terms.
 
+<!--more-->
 ## Consistency
-$\gdef\Con{\operatorname{Con}}$
 
 The great insight of Gödel's incompleteness theorems is the __arithmetisation of logic__. Fix a logical theory that contains a certain subsystem of arithmetic, strong enough to encode strings of logical symbols into natural numbers. (For this post, we will choose PA for simplicity.) Then within PA, we can write formulas that mean
 
