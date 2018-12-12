@@ -1,0 +1,12 @@
+<div class="comment-form">
+  <h2>Write a comment&hellip;</h2>
+  <form method="POST" action="">
+    <input name="options[slug]" type="hidden" value="{{ page.slug }}">
+    <input type="text" name="fields[name]" placeholder="Name" required>
+    <input type="text" name="fields[email]" placeholder="Email (optional, will not be displayed)">
+    <input type="text" name="fields[website]" placeholder="Website (optional)">
+    <textarea name="fields[comment]" placeholder="Comment" style="height:10rem;resize:none;" required></textarea> 
+    <input type="text" name="fields[hp]" placeholder="Leave blank if human" style="width:10rem;padding:0 0;margin:0.7em 0;">
+    <input type="submit" value="Submit">
+  </form>
+</div>

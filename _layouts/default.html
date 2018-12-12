@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  
+  {%- include head.html -%}
+  
+  {%- if page.math_typeset == "mathjax" -%}
+    {%- include mathjax_support.html -%}
+  {%- endif -%}
+
+  {%- comment -%}
+  <!-- {% if page.math_typeset == "katex" %}
+    $\gdef\bb#1{\mathbb{#1}}$
+    $\gdef\bf#1{\mathbf{#1}}$
+    $\gdef\mc#1{\mathcal{#1}}$
+    $\gdef\del\partial$
+    $\gdef\eps\varepsilon$
+    $\gdef\Re{\operatorname{Re}}$
+    $\gdef\Im{\operatorname{Im}}$
+    $\gdef\qed{\ \square}$
+  {% endif %} -->
+  {%- endcomment -%}
+
+  <body>
+
+    {%- include sidebar.html -%}
+
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+         content to avoid any CSS collisions with our real content. -->
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
+            <small>{{ site.tagline }}</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+        {{ content }}
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+    <script>
+      (function(document) {
+        var toggle = document.querySelector('.sidebar-toggle');
+        var sidebar = document.querySelector('#sidebar');
+        var checkbox = document.querySelector('#sidebar-checkbox');
+
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+
+          if(!checkbox.checked ||
+             sidebar.contains(target) ||
+             (target === checkbox || target === toggle)) return;
+
+          checkbox.checked = false;
+        }, false);
+      })(document);
+    </script>
+
+    {%- comment -%}
+    <!-- {% if page.math_typeset == "katex" %}
+      {% include katex_support.html %}
+    {% endif %} -->
+
+    <!-- <script type="text/javascript">
+      WebFontConfig = {
+        google: { families: [ 'Lato', 'Lora:400,400i,700' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+    </script> -->
+    {%- endcomment -%}
+  </body>
+</html>

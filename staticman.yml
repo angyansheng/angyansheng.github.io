@@ -1,0 +1,19 @@
+comments:
+  allowedFields: ["name","email","website","comment"]
+  requiredFields: ["name","comment"]
+  branch: "master"
+  commitMessage: "Add comment from {fields.name}"
+
+  filename: "comment-{@timestamp}-{@id}"
+  format: "yml"
+  path: "_data/comments/{options.slug}"
+  generatedFields:
+    date:
+      type: date
+      options:
+        format: "iso8601"
+
+  moderation: true
+
+  transforms:
+    email: md5

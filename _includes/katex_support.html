@@ -1,0 +1,62 @@
+{%- comment -%}
+<!-- with jQuery:
+<script type="text/javascript">
+  $("script[type='math/tex']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<span class=\"inline-equation\">" + 
+             katex.renderToString(tex) +
+             "</span>";
+  });
+
+  $("script[type='math/tex; mode=display']").replaceWith(
+    function(){
+      var tex = $(this).text();
+      return "<div class=\"equation\">" + 
+             katex.renderToString(tex,
+              {
+                displayMode: true,
+                macros: {
+                  "\\bb":"\\mathbb",
+                  "\\bf":"\\mathbf",
+                  "\\mc":"\\mathcal",
+                  "\\del":"\\partial",
+                  "\\eps":"\\varepsilon",
+                  "\\Re":"\\operatorname{Re}",
+                  "\\Im":"\\operatorname{Im}",
+                  "\\qed":"\\qquad\\square"
+                }
+              }) +
+             "</div>";
+  });
+</script> -->
+
+<!-- without jQuery:
+https://github.com/gettalong/kramdown/issues/292#issuecomment-313266061 -->
+<!-- <script defer type="text/javascript">
+  // document.querySelectorAll("script[type='math/tex']").forEach(function(el) {
+  //   el.outerHTML = katex.renderToString(el.textContent, { displayMode: false });
+  // });
+
+  document.querySelectorAll("script[type='math/tex; mode=display']").forEach(function(el) {
+    el.outerHTML = katex.renderToString(el.textContent,
+                  {
+                    displayMode: true,
+                    macros: {
+                      "\\qed":"\\qquad\\square"
+                    }
+                  });
+  })
+</script>
+<script defer>
+  renderMathInElement(
+      document.body,
+      {
+          delimiters: [
+              // {left: "\\[", right: "\\]", display: true},
+              {left: "$", right: "$", display: false},
+          ]
+      }
+  );
+</script> -->
+{%- endcomment -%}

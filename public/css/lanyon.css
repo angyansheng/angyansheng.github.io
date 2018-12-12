@@ -1,0 +1,748 @@
+:root {
+  --col-dark: #731616;
+  --col-base: #933;
+  --col-link: #933; /*4c4ca7*/
+  /*--col-light: #b95555;
+  --col-text-dark: #2b3434;*/
+  --col-text: #2e3838;
+  --col-text-light: #576060;
+  --col-bg: #f1eeee;
+  --col-bg-dark: #d7dfdf;
+}
+
+/*
+ * Global resets
+ *
+ * Update the foundational and global aspects of the page.
+ */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+/* Scroll on narrow devices */
+  overflow-x: auto;
+}
+
+
+
+html {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: .005rem;
+}
+@media (min-width: 38em) {
+  html {
+    font-size: 20px;
+  }
+}
+
+body {
+  color: var(--col-text);
+  background-color: var(--col-bg);
+  -webkit-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%;
+  /*text-align: justify;
+  text-justify: auto;*/
+}
+
+/* No `:visited` state is required by default (browsers will use `a`) */
+a {
+  color: var(--col-link);
+  text-decoration: none;
+}
+a strong {
+  color: inherit;
+}
+/* `:focus` is linked to `:hover` for basic accessibility */
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lucida Sans Unicode", Helvetica, sans-serif;
+  font-weight: 400;
+  color: var(--col-dark);
+  letter-spacing: -.06rem;
+  line-height: 1;
+  margin-bottom: .5rem;
+  text-rendering: optimizeLegibility;
+}
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+h3 {
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+}
+h4, h5, h6 {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+
+/* Body text */
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/*strong {
+  color: var(--col-text-dark);
+}*/
+
+
+/* Lists */
+ul, ol, dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+dt {
+  font-weight: bold;
+}
+dd {
+  margin-bottom: .5rem;
+}
+
+/* Misc */
+hr {
+  position: relative;
+  margin: 1.5rem 0;
+  border: 0;
+  border-top: 1px solid var(--col-bg-dark);
+  border-bottom: 1px solid var(--col-bg);
+}
+
+/*abbr {
+  font-size: 85%;
+  font-weight: bold;
+  color: #555;
+  text-transform: uppercase;
+}
+abbr[title] {
+  cursor: help;
+  border-bottom: 1px dotted #e5e5e5;
+}*/
+
+
+/* Code */
+/*code,
+pre {
+  font-family: Menlo, Monaco, "Courier New", monospace;
+}
+code {
+  padding: .25em .5em;
+  font-size: 85%;
+  color: #bf616a;
+  background-color: var(--col-bg-dark);
+  border-radius: 3px;
+}
+pre {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: .8rem;
+  line-height: 1.4;
+  white-space: pre;
+  white-space: pre-wrap;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: var(--col-bg-dark);
+}
+pre code {
+  padding: 0;
+  font-size: 100%;
+  color: inherit;
+  background-color: transparent;
+}
+*/
+/* Pygments via Jekyll */
+/*.highlight {
+  margin-bottom: 1rem;
+  border-radius: 4px;
+}
+.highlight pre {
+  margin-bottom: 0;
+}
+*/
+/* Gist via GitHub Pages */
+/*.gist .gist-file {
+  font-family: Menlo, Monaco, "Courier New", monospace !important;
+}
+.gist .markdown-body {
+  padding: 15px;
+}
+.gist pre {
+  padding: 0;
+  background-color: transparent;
+}
+.gist .gist-file .gist-data {
+  font-size: .8rem !important;
+  line-height: 1.4;
+}
+.gist code {
+  padding: 0;
+  color: inherit;
+  background-color: transparent;
+  border-radius: 0;
+}*/
+
+/* Quotes */
+blockquote {
+  padding: .5rem 1rem;
+  margin: .8rem 0;
+  color: var(--col-text-light);
+  border-left: .25rem solid rgba(128,128,128,.1);
+}
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+@media (min-width: 30em) {
+  blockquote {
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+  }
+}
+
+/* Images */
+img {
+  display: block;
+  height: 50%;
+  width: 50%;
+  object-fit: contain;
+  margin: 0 auto 1rem;
+  border-radius: 5px;
+}
+
+/* Tables */
+table {
+  margin-bottom: 1rem;
+  width: 100%;
+  border: 1px solid var(--col-bg-dark);
+  border-collapse: collapse;
+}
+td,
+th {
+  padding: .25rem .5rem;
+  border: 1px solid var(--col-bg-dark);
+}
+/*tbody tr:nth-child(odd) td,
+tbody tr:nth-child(odd) th {
+  background-color: var(--col-bg-dark);
+}*/
+
+
+
+/*
+ * Wrapper
+ *
+ * The wrapper is used to position site content when the sidebar is toggled. We
+ * use an outter wrap to position the sidebar without interferring with the
+ * regular page content.
+ */
+
+.wrap {
+  position: relative;
+  width: 100%;
+}
+
+
+/*
+ * Container
+ *
+ * Center the page content.
+ */
+
+.container {
+  max-width: 28rem;
+  padding-left:  1rem;
+  padding-right: 1rem;
+  margin-left:  auto;
+  margin-right: auto;
+}
+@media (min-width: 38em) {
+  .container {
+    max-width: 32rem;
+  }
+}
+@media (min-width: 56em) {
+  .container {
+    max-width: 38rem;
+  }
+}
+
+
+/*
+ * Masthead
+ *
+ * Super small header above the content for site name and short description.
+ */
+
+.masthead {
+  padding-top:    1rem;
+  padding-bottom: 1rem;
+}
+.masthead-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  letter-spacing: -.04rem;
+}
+.masthead-title a {
+  color: var(--col-dark);
+}
+.masthead-title small {
+  font-size: 75%;
+  font-weight: 400;
+  color: var(--col-text-light);
+  /*letter-spacing: 0;*/
+  margin-left: 0.5rem;
+}
+
+@media (max-width: 48em) {
+  .masthead-title {
+    text-align: center;
+  }
+  .masthead-title small {
+    display: none;
+  }
+}
+
+/*
+ * Sidebar
+ *
+ * The sidebar is the drawer, the item we are toggling with our handy hamburger
+ * button in the corner of the page.
+ *
+ * This particular sidebar implementation was inspired by Chris Coyier's
+ * "Offcanvas Menu with CSS Target" article, and the checkbox variation from the
+ * comments by a reader. It modifies both implementations to continue using the
+ * checkbox (no change in URL means no polluted browser history), but this uses
+ * `position` for the menu to avoid some potential content reflow issues.
+ *
+ * Source: http://css-tricks.com/off-canvas-menu-with-css-target/#comment-207504
+ */
+
+/* Style and "hide" the sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: -14rem;
+  width: 14rem;
+  visibility: hidden;
+  overflow-y: auto;
+  font-family: "Lucida Sans Unicode", Helvetica, sans-serif;
+  font-size: .875rem; /* 15px */
+  letter-spacing: -.04rem;
+  color: rgba(255,255,255,.6);
+  background-color: var(--col-base);
+  -webkit-transition: all .3s ease-in-out;
+          transition: all .3s ease-in-out;
+}
+/*@media (min-width: 30em) {
+  .sidebar {
+    font-size: .75rem; /* 14px 
+  }
+}
+*/
+/* Sidebar content */
+.sidebar a {
+  font-weight: normal;
+  color: var(--col-bg);
+}
+.sidebar-item {
+  padding: 1rem;
+}
+.sidebar-item p:last-child {
+  margin-bottom: 0;
+}
+
+/* Sidebar nav */
+.sidebar-nav {
+  border-bottom: 1.5px solid rgba(255,255,255,.1);
+}
+.sidebar-nav-item {
+  display: block;
+  padding: .5rem 1rem;
+  border-top: 1.5px solid rgba(255,255,255,.1);
+}
+.sidebar-nav-item.active,
+a.sidebar-nav-item:hover,
+a.sidebar-nav-item:focus {
+  text-decoration: none;
+  background-color: rgba(255,255,255,.1);
+  border-color: transparent;
+}
+
+@media (min-width: 48em) {
+  .sidebar-item {
+    padding: 1.5rem;
+  }
+  .sidebar-nav-item {
+    padding-left:  1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* Hide the sidebar checkbox that we toggle with `.sidebar-toggle` */
+.sidebar-checkbox {
+  opacity: 0;
+  height: 0;
+  position: absolute;
+  top: -1rem;
+  left: -1rem;
+}
+
+/* Style the `label` that we use to target the `.sidebar-checkbox` */
+.sidebar-toggle {
+  position: fixed;
+  top:  1rem;
+  left: 1rem;
+  display: block;
+  padding: .25rem .8rem;
+  background-color: var(--col-bg);
+  box-shadow: 0.5px 1.5px 2px var(--col-dark);
+  border: 1.5px solid var(--col-base);
+  border-radius: .25rem;
+  cursor: pointer;
+  font-size: 1.2rem
+}
+
+.sidebar-toggle:before {
+  display: inline-block;
+  width: 1.2rem;
+  height: .9rem;
+  content: "";
+  background-image: linear-gradient(to bottom, var(--col-base), var(--col-base) 20%, var(--col-bg) 20%, var(--col-bg) 40%, var(--col-base) 40%, var(--col-base) 60%, var(--col-bg) 60%, var(--col-bg) 80%, var(--col-base) 80%, var(--col-base) 100%);
+}
+
+.sidebar-toggle:active,
+#sidebar-checkbox:focus ~ .sidebar-toggle,
+#sidebar-checkbox:checked ~ .sidebar-toggle {
+  color: var(--col-bg);
+  background-color: var(--col-base);
+  box-shadow: none;
+}
+
+.sidebar-toggle:active:before,
+#sidebar-checkbox:focus ~ .sidebar-toggle:before,
+#sidebar-checkbox:checked ~ .sidebar-toggle:before {
+  background-image: linear-gradient(to bottom, var(--col-bg), var(--col-bg) 20%, var(--col-base) 20%, var(--col-base) 40%, var(--col-bg) 40%, var(--col-bg) 60%, var(--col-base) 60%, var(--col-base) 80%, var(--col-bg) 80%, var(--col-bg) 100%);
+}
+
+/*@media (min-width: 30.1em) {
+  .sidebar-toggle {
+    position: fixed;
+  }
+}*/
+
+@media print {
+  .sidebar-toggle {
+    display: none;
+  }
+}
+
+/* Slide effect
+ *
+ * Handle the sliding effects of the sidebar and content in one spot, seperate
+ * from the default styles.
+ *
+ * As an a heads up, we don't use `transform: translate3d()` here because when
+ * mixed with `position: fixed;` for the sidebar toggle, it creates a new
+ * containing block. Put simply, the fixed sidebar toggle behaves like
+ * `position: absolute;` when transformed.
+ *
+ * Read more about it at http://meyerweb.com/eric/thoughts/2011/09/12/.
+ */
+
+.wrap,
+.sidebar,
+.sidebar-toggle {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.wrap,
+.sidebar-toggle {
+    transition: -webkit-transform .3s ease-in-out;
+    transition: transform .3s ease-in-out;
+    transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out;
+}
+
+#sidebar-checkbox:checked + .sidebar {
+  z-index: 10;
+  visibility: visible;
+}
+#sidebar-checkbox:checked ~ .sidebar,
+#sidebar-checkbox:checked ~ .wrap,
+#sidebar-checkbox:checked ~ .sidebar-toggle {
+  -webkit-transform: translateX(14rem);
+          transform: translateX(14rem);
+}
+
+
+/*
+ * Posts and pages
+ *
+ * Each post is wrapped in `.post` and is used on default and post layouts. Each
+ * page is wrapped in `.page` and is only used on the page layout.
+ */
+
+.page,
+.post {
+  padding-top: 2em;
+  margin-bottom: 2em;
+  border-top: 1.5px solid var(--col-bg-dark);
+}
+
+/* Blog post or page title */
+.page-title,
+.post-title,
+.post-title a {
+  color: var(--col-dark);
+}
+.page-title,
+.post-title {
+  margin-top: 0;
+}
+
+/* Meta data line below post title */
+.post-date {
+  display: block;
+  margin-bottom: .5rem;
+  color: var(--col-text-light);
+}
+
+/* Related posts */
+.related {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-top: 1.5px solid var(--col-bg-dark);
+}
+.related-posts {
+  padding-left: 0;
+  list-style: none;
+}
+.related-posts h3 {
+  margin-top: 0;
+}
+.related-posts li small {
+  font-size: 75%;
+  color: var(--col-text-light);
+}
+/*.related-posts li a:hover {
+  color: #268bd2;
+  text-decoration: none;
+}
+.related-posts li a:hover small {
+  color: inherit;
+}*/
+
+
+/* Comment form */
+.comment-form {
+  padding-top: 0.5rem;
+  padding-bottom: 3rem;
+  border-top: 1.5px solid var(--col-bg-dark);
+}
+
+input[type=text],
+textarea {
+  width: 100%;
+  background-color: var(--col-bg);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 0.5rem 0.5rem;
+  margin: 0.2rem 0;
+  border: 1.5px solid var(--col-text-light);
+  border-radius: 0.25rem;
+  box-shadow: inset 0 1px 1px var(--col-text);
+  outline: none;
+  transition: 0.3s;
+}
+
+input[type=text]:focus,
+textarea:focus {
+  background-color: rgba(255,255,255,0.6);
+  border: 1.5px solid var(--col-base);
+  box-shadow: inset 0 1px 1px var(--col-dark);
+}
+
+input[type=submit] {
+  background-color: var(--col-bg);
+  color: var(--col-base);
+  font-family: "Lucida Sans Unicode", Helvetica, sans-serif;
+  font-size: 18px;
+  letter-spacing: -.04rem;
+  width: 100%;
+  padding: 0.5rem 1.5rem;
+  border: 1.5px solid var(--col-base);
+  border-radius: 0.25rem;
+  box-shadow: 0.5px 1.5px 2px var(--col-dark);
+  cursor: pointer;
+}
+
+
+input[type=submit]:active,
+input[type=submit]:focus {
+  color: var(--col-bg);
+  background-color: var(--col-base);
+  box-shadow: none;
+}
+
+@media (min-width: 38em) {
+  input[type=text],
+  textarea {
+    font-size: 20px;
+  }
+  input[type=submit] {
+    width: auto;
+    float: right;
+  }
+}
+
+/* Comments */
+.comments-section {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-top: 1.5px solid var(--col-bg-dark);
+}
+.comments-section li {
+
+}
+
+
+/*
+ * Pagination
+ *
+ * Super lightweight (HTML-wise) blog pagination. `span`s are provide for when
+ * there are no more previous or next posts to show.
+ */
+
+.pagination {
+  overflow: hidden; /* clearfix */
+  margin-left: -1rem;
+  margin-right: -1rem;
+  font-family: "Lucida Sans Unicode", Helvetica, sans-serif;
+  font-size: 1.2rem;
+  color: var(--col-text-light);
+  text-align: center;
+}
+
+/* Pagination items can be `span`s or `a`s */
+.pagination-item {
+  display: block;
+  padding: 1rem;
+  border: 1px solid var(--col-text-light);
+}
+.pagination-item:first-child {
+  margin-bottom: -1px;
+}
+
+/* Only provide a hover state for linked pagination items */
+a.pagination-item:hover,
+a.pagination-item:focus {
+  text-decoration: none;
+  color: var(--col-bg);
+  border: 1px solid var(--col-base);
+  background-color: var(--col-base);
+}
+
+@media (min-width: 30em) {
+  .pagination {
+    margin: 3rem 0;
+  }
+  .pagination-item {
+    float: left;
+    width: 50%;
+  }
+  .pagination-item:first-child {
+    margin-bottom: 0;
+    border-top-left-radius:    0.25rem;
+    border-bottom-left-radius: 0.25rem;
+  }
+  .pagination-item:last-child {
+    margin-left: -1px;
+    border-top-right-radius:    0.25rem;
+    border-bottom-right-radius: 0.25rem;
+  }
+}
+
+/*
+ * Overlay sidebar
+ *
+ * Make the sidebar content overlay the viewport content instead of pushing it
+ * aside when toggled.
+ */
+
+/*.sidebar-overlay #sidebar-checkbox:checked ~ .wrap {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+}
+.sidebar-overlay #sidebar-checkbox:checked ~ .sidebar-toggle {
+  box-shadow: 0 0 0 .25rem var(--col-bg);
+}
+.sidebar-overlay #sidebar-checkbox:checked ~ .sidebar {
+  box-shadow: .25rem 0 .5rem rgba(0,0,0,.1);
+}
+*/
+
+
+/* Tags */
+.tag-box {
+  list-style: none;
+  margin: 0;
+  padding: 4px 0;
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 85%;
+}
+
+.tag-box:before,.tag-box:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+.tag-box:after {
+  clear: both;
+}
+
+.tag-box a {
+  padding: 2px 6px;
+  margin: 5px;
+  background-color: var(--col-bg-dark);
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.tag-box.inline li {
+  float: left;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 2;
+}
+
+.posts li {
+  list-style: none;
+  margin: 0 -1rem;
+}
+
+.tag-box a span {
+  vertical-align: super;
+  font-size: 10px;
+  font-size: 0.625rem;
+}
