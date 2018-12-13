@@ -1,12 +1,13 @@
 ---
 title: 'Vintage Computing'
 layout: post
-category: blog
-tag: []
+tag: [computing]
 date: 2018-10-23 23:00:00 +0800
 ---
 
 Last week, I learnt about [Micro Mages](http://morphcat.de/micromages/), a new game for the NES from [Morphcat Studios](http://morphcat.de/). The game looks great, sounds great, and _fits into 40KB_. [This video](https://youtu.be/ZWQ0591PAxM) clearly explains the ideas behind the code and graphics optimisation.
+
+<!--more-->
 
 For those from a different generation, the [Nintendo Entertainment System](https://en.wikipedia.org/wiki/Nintendo_Entertainment_System) was a 8-bit video game console that dominated the market in the 80s, in the days before such modern luxuries as GPUs, sound cards, and digital monitors. The hardware specs leads one to wonder how it was possible to do _anything_ on the NES:
 - an 8-bit CPU at 1.79MHz, with 2KB RAM;

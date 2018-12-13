@@ -2,7 +2,7 @@
 title: 'Calculating By Hand (I): $\ln2$'
 layout: post
 date: 2018-08-16 14:51:33 -0400
-tag: arithmetic
+tag: [infinite series]
 ---
 Over the Simcoe Day long weekend, I got back into one of my (many) nerdy interests: pen-and-paper calculation.
 

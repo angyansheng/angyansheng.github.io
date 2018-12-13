@@ -1,8 +1,7 @@
 ---
 title: 'A Theory That Proves Its Own Inconsistency'
 layout: post
-category: blog
-tag: []
+tag: [logic]
 date: 2018-12-06 23:00:00 +0800
 macros: >-
   "\\Con":"\\operatorname{Con}",

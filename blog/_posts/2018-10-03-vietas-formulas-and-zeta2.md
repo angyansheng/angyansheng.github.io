@@ -2,7 +2,7 @@
 title: >-
   Vieta's Formulas and $\zeta(2)$
 layout: post
-tags: []
+tag: [elementary algebra, infinite series]
 date: 2018-10-03 23:00:00 +0800
 ---
 

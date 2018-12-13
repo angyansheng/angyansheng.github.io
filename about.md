@@ -1,6 +1,7 @@
 ---
 layout: page
 title: About
+sidebar_order: 5
 ---
 
 Hi! I'm Yan Sheng, a Year 4 undergrad math major at the National University of Singapore. In this blog I record some of the math I get excited about, as well as notes for courses I am taking.

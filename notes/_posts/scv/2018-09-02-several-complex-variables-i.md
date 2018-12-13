@@ -5,8 +5,6 @@ tag: [several complex variables]
 date: 2018-09-02 09:33:12 +0800
 ---
 
-This series of posts are adapted from the notes for the topics course MA4291, offered in AY18/19 Sem 1 by Prof Chin Chee Whye.
-
 In this post, we recast some of one-variable complex analysis in terms of the differentials $dz$ and $d\overline z$, and the differential operators $\frac\del{\del z}$ and $\frac\del{\del\overline z}$.
 
 <!--more-->

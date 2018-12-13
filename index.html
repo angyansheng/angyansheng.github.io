@@ -1,45 +1,9 @@
 ---
-layout: default
-title: Home
-regenerate: true
+layout: home
+math_typeset: "none"
 ---
 
-<div class="posts">
-  {% for post in paginator.posts %}
-  <div class="post">
-    <h1 class="post-title">
-      <a href="{{ post.url | relative_url }}">
-        {{ post.title }}
-      </a>
-    </h1>
-
-    <span class="post-date">{{ post.date | date_to_string }}</span>
-
-    {%- if post.content contains '<!--more-->' -%}
-      {{ post.excerpt }}
-    {%- else -%}
-      {{ post.content | split:'</p>' | first | markdownify | append: '</p>' }}
-    {%- endif -%}
-    
-    <p><a href="{{ post.url | relative_url }}"> Read more</a></p>
-  </div>
-  {% endfor %}
-</div>
-
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-item older" href="{{ site.baseurl }}/page{{paginator.next_page}}">Older</a>
-  {% else %}
-    <span class="pagination-item older">Older</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    {% if paginator.page == 2 %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}/">Newer</a>
-    {% else %}
-      <a class="pagination-item newer" href="{{ site.baseurl }}/page{{paginator.previous_page}}">Newer</a>
-    {% endif %}
-  {% else %}
-    <span class="pagination-item newer">Newer</span>
-  {% endif %}
-</div>
-
+{%- assign sidebar_pages = site.pages | where_exp:"p","p.sidebar_order != 0" | sort:"sidebar_order"-%}
+{% for p in sidebar_pages -%}
+<h1><a href={{ p.url | relative_url }}>{{p.title}}</a></h1>
+{% endfor -%}

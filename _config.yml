@@ -2,10 +2,10 @@
 permalink:           pretty
 
 # Setup
-title:               Yan Sheng's blog
+title:               Yan Sheng's site
 tagline:             'A math blog'
 description:         >- # this means to ignore newlines until "baseurl:"
-                     Welcome to my blog!
+                     Welcome to my site!
 # url:                 http://lanyon.getpoole.com
 baseurl:             ''
 
@@ -19,9 +19,10 @@ baseurl:             ''
 # version:             1.0.0
 
 # Plugins
-plugins: [jekyll-paginate]
-paginate: 5
-paginate_path: "page:num" 
+# plugins: [jekyll-paginate]
+# paginate: 5
+# paginate_path: "page:num" 
+plugins: [jekyll-sitemap]
 
 markdown: kramdown
 kramdown:
@@ -35,10 +36,11 @@ defaults:
       path: ""
       type: post
     values:
-      permalink: /:title
+      permalink: /:categories/:title
       excerpt_separator: '<!--more-->'
   -
     scope:
       path: ""
     values:
       math_typeset: "katex"
+      sidebar_order: 0
