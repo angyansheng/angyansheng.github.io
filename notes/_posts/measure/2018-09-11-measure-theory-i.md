@@ -33,6 +33,12 @@ Here are some examples of $\sigma$-algebras.
 - By the axioms, any $\sigma$-algebra on $\Omega$ must contain $\emptyset$ and $\Omega\backslash\emptyset=\Omega$. Conversely, we can check that $\\{\emptyset,\Omega\\}$ is a $\sigma$-algebra on $\Omega$.
 - Let $A\subseteq\Omega$. Then $\\{\emptyset,A,\Omega\backslash A,\Omega\\}$ is a $\sigma$-algebra on $\Omega$.
 
+__Example__: Let $\lvert\Omega\rvert=4$, and let
+
+$$\Sigma=\{A\subseteq\Omega\,:\,|A|=0,\,2,\,\text{or }4\}.$$
+
+Then $\Sigma$ contains $\emptyset$, and is closed under complement and countable _disjoint_ union. However, the union of two 2-element subsets of $\Omega$ can contain 3 elements, so $\Sigma$ is _not_ a $\sigma$-algebra on $\Omega$.
+
 Now we prove some elementary consequences of the axioms.
 
 __Proposition__: For any $\sigma$-algebra $\Sigma$ on a set $\Omega$, we have:

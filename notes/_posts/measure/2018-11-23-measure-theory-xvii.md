@@ -206,7 +206,7 @@ __Proof__: (1) is clear by taking the trivial partition $\\{a,b\\}$.
 
 (2): For any partitions $\\{y_k\\}_ {k=0}^{n'}$ and $\\{z_l\\}_ {l=0}^{n''}$ of $[a,c]$ and $[c,b]$ respectively, their union forms a partition $\\{x_j\\}_ {j=0}^n$ of $[a,b]$, with
 
-$$\sum_{j=0}^n|f(x_j)-f(x_{j-1})|=\sum_{k=0}^{n'}|f(y_k)-f(y_{k-1})|+\sum_{l=0}^\infty|f(z_l)-f(z_{l-1})|.$$
+$$\sum_{j=0}^n|f(x_j)-f(x_{j-1})|=\sum_{k=0}^{n'}|f(y_k)-f(y_{k-1})|+\sum_{l=0}^{n''}|f(z_l)-f(z_{l-1})|.$$
 
 Taking suprema over $\\{y_k\\}$, $\\{z_l\\}$ gives $\Var_{[a,b]}f\geq\Var_{[a,c]}f+\Var_{[c,b]}f$.
 
@@ -264,7 +264,7 @@ $$g_1(x)=\begin{cases}f_1'(x),&f\text{ differentiable at }x\\0,&\text{otherwise}
 and $g_2$ similarly. Then $g=g_1-g_2$ $\lambda$-a.e., so
 
 $$\begin{aligned}
-\int_{[a,b]}\!|g|\,d\lambda&\leq\int_{[a,b]}\!|g_1|\,d\lambda+\int_{[a,b]}\!|g_1|\,d\lambda\\
+\int_{[a,b]}\!|g|\,d\lambda&\leq\int_{[a,b]}\!|g_1|\,d\lambda+\int_{[a,b]}\!|g_2|\,d\lambda\\
 &\leq f_1(b)-f_1(a)+f_2(b)-f_2(a)\\
 &=\Var_{[a,b]}f,
 \end{aligned}$$
