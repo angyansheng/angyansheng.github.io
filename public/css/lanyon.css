@@ -549,7 +549,7 @@ a.sidebar-nav-item:focus {
   color: inherit;
 }*/
 
-
+{% comment %}
 /* Comment form */
 .comment-form {
   padding-top: 0.5rem;
@@ -679,7 +679,7 @@ a.pagination-item:focus {
     border-bottom-right-radius: 0.25rem;
   }
 }
-
+{% endcomment %}
 /*
  * Overlay sidebar
  *
