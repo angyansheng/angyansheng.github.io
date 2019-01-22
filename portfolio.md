@@ -6,6 +6,10 @@ sidebar_order: 2.5
 
 ## Presentations
 
+__Bicuspidal Geodesics on Punctured Hyperbolic Surfaces__ ([pdf]({{site.baseurl}}/assets/Y4S2/FYP_midterm_talk_handout.pdf))\\
+Final Year Project midterm talk, 35 mins\\
+Jan 2019
+
 __Geodesics on Once-Punctured Hyperbolic Tori__ ([pdf]({{site.baseurl}}/assets/Y4S1/FYP_intro_talk_handout.pdf))\\
 Final Year Project introductory talk, 20 mins\\
 Oct 2018

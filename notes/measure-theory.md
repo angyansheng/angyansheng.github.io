@@ -7,7 +7,7 @@ Measure theory is the study of __measures__ on a set, which are assignments of a
 
 These notes closely follow the graduate course MA5205 Graduate Analysis I, offered in AY2018/19 Semester 1 by Prof Denny Leung.
 
-{% assign post_list = site.posts | where_exp:"x","x.path contains 'notes/_posts/measure'" | reverse %}
+{% assign post_list = site.categories.notes | where_exp:"x","x.tags contains 'measure theory'" | reverse %}
 <ul class="posts">
 	{% for post in post_list -%}
 		<li><a href="{{ post.url }}">{{ post.title }}</a></li>
