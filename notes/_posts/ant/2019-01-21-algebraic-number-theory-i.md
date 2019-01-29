@@ -172,7 +172,7 @@ __Corollary__: $N(\alpha\beta)=N(\alpha)N(\beta)$. $\qed$
 
 __Corollary__: If $\alpha\mid\beta$ in $\bb Z[\omega]$, then $N(\alpha)\mid N(\beta)$ in $\bb Z$. $\qed$
 
-__Proposition__: $u\in\bb Z[\omega]$ is a unit if and only if $N(u)=1$.
+__Proposition__: $u\in\bb Z[\omega]$ is a unit if and only if $N(u)=1$. $\qed$
 
 __Corollary__: The units of $\bb Z[\omega]$ are $\pm1$, $\pm\omega$, and $\pm\omega^2$.
 
@@ -194,7 +194,7 @@ $$\begin{aligned}
 
 with equality possible only if $\lvert(x-m)-(y-n)\rvert=\lvert(x-m)+(y-n)\rvert=1$. It is easy to check that this never occurs. $\qed$
 
-__Corollary__: $\bb Z[\omega]$ is a UFD.
+__Corollary__: $\bb Z[\omega]$ is a UFD. $\qed$
 
 ## The irreducible elements of $\bb Z[\omega]$
 
