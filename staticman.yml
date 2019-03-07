@@ -9,6 +9,7 @@ comments:
   path: "_data/comments/{options.slug}"
   generatedFields:
     name-md5:
+      type: slugify
       options:
         field: name
     date:
