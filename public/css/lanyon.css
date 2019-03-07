@@ -549,7 +549,6 @@ a.sidebar-nav-item:focus {
   color: inherit;
 }*/
 
-{% comment %}
 /* Comment form */
 .comment-form {
   padding-top: 0.5rem;
@@ -619,10 +618,53 @@ input[type=submit]:focus {
   padding-bottom: 0.5rem;
   border-top: 1.5px solid var(--col-bg-dark);
 }
-.comments-section li {
-
+.comments {
+  list-style: none;
+  max-width: 800px;
+  width: 100%;
+  margin: 1rem auto;
+}
+.comment {
+  display: flex;
+  flex-wrap: wrap;
+}
+.comment-avatar {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 8px;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+.comment-avatar img {
+  height: 100%;
+  width: 100%;
+  margin: 0 0 0 0;
+}
+.comment-info {
+  font-family: "Lucida Sans Unicode", Helvetica, sans-serif;
+  font-weight: 400;
+  color: var(--col-dark);
+  letter-spacing: -.06rem;
+  line-height: 2;
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+  text-rendering: optimizeLegibility;
+}
+.comment-info a small {
+  font-size: 75%;
+}
+.comment-body{
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  padding: 4px 8px 4px 8px;
+  background-color: var(--col-bg-dark);
 }
 
+{% comment %}
+.comment .author {
+  border: 1.5px solid var(--col-text-light);
+}
 
 /*
  * Pagination
@@ -680,6 +722,7 @@ a.pagination-item:focus {
   }
 }
 {% endcomment %}
+
 /*
  * Overlay sidebar
  *
@@ -687,7 +730,7 @@ a.pagination-item:focus {
  * aside when toggled.
  */
 
-/*.sidebar-overlay #sidebar-checkbox:checked ~ .wrap {
+.sidebar-overlay #sidebar-checkbox:checked ~ .wrap {
   -webkit-transform: translateX(0);
       -ms-transform: translateX(0);
           transform: translateX(0);
@@ -698,7 +741,7 @@ a.pagination-item:focus {
 .sidebar-overlay #sidebar-checkbox:checked ~ .sidebar {
   box-shadow: .25rem 0 .5rem rgba(0,0,0,.1);
 }
-*/
+
 
 
 /* Tags */

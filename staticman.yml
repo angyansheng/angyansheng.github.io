@@ -2,12 +2,13 @@ comments:
   allowedFields: ["name","email","website","comment"]
   requiredFields: ["name","comment"]
   branch: "master"
-  commitMessage: "Add comment from {fields.name}"
+  commitMessage: "Comment on {options.slug} from {fields.name}"
 
   filename: "comment-{@timestamp}-{@id}"
   format: "yml"
   path: "_data/comments/{options.slug}"
   generatedFields:
+    name-md5: "{fields.name}"
     date:
       type: date
       options:
@@ -17,3 +18,4 @@ comments:
 
   transforms:
     email: md5
+    name-md5: md5

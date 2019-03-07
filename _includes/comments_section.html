@@ -1,6 +1,33 @@
 <div class="comments-section">
-  <h2>Comments</h2>
+  <h2>Comments ({{ site.data.comments[page.slug] | size }})</h2>
+  {% if site.data.comments.[page.slug] -%}
+  {% assign all_comments = site.data.comments.[page.slug] | sort -%}
   <ul class="comments">
-    <!-- TBC -->
+  {% for comments in all_comments -%}
+  {% assign index   = forloop.index -%}
+  {% assign comment = comments[1] -%}
+  {% if comment.name == 'Yan Sheng' and comment.website == 'angyansheng.github.io' -%}
+  {% assign isauth  = true -%}
+  {% else -%}
+  {% assign isauth  = false -%}
+  {% endif -%}  
+    <li class="comment" id="{{ comment._id }}">
+      <div class="comment-avatar">
+        <img src="{% if isauth -%}{{ site.baseurl }}/favicon.ico{% elsif comment.website != '' %}https://www.gravatar.com/avatar/{{ comment.email }}?d=identicon&s=60{% else -%}https://www.gravatar.com/avatar/{{ comment.name-md5 }}?d=identicon&s=60{% endif -%}">
+      </div>
+    	<div class="comment-info">
+        {% if comment.website != '' -%}
+        <a href="//{{ comment.website | remove_first: 'https://' | remove_first: 'http://' }}">{{ comment.name | strip_html }}</a>
+        {% else -%}
+        {{ comment.name | strip_html }}
+        {% endif -%}
+        <small><a href="{{ page.url }}#{{ comment._id }}">{{ comment.date | date: "%d %b %Y, %H:%M UTC" }}</a></small>
+    	</div>
+    	<div class="comment-body {% if isauth -%}author{% endif -%}">{{ comment.comment | strip_html}}</div>
+    </li>
+  {% endfor -%}
   </ul>
+  {% else -%}
+  <p> Be the first to comment! </p>
+  {% endif %}
 </div>
