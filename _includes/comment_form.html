@@ -1,7 +1,7 @@
 <div class="comment-form">
   <h2>Write a comment&hellip;</h2>
   <form method="POST" action="https://dev.staticman.net/v3/entry/github/angyansheng/angyansheng.github.io/master/comments/">
-    <input name="options[redirect]" type="hidden" value="{{ site.baseurl }}{{ page.url }}">
+    <input name="options[redirect]" type="hidden" value="{{ site.url }}{{ page.url }}">
     <input name="options[slug]" type="hidden" value="{{ page.slug }}">
     <input type="text" name="fields[name]" placeholder="Name" required>
     <input type="text" name="fields[email]" placeholder="Email (optional, will not be displayed)">

@@ -8,7 +8,9 @@ comments:
   format: "yml"
   path: "_data/comments/{options.slug}"
   generatedFields:
-    name-md5: "{fields.name}"
+    name-md5:
+      options:
+        field: name
     date:
       type: date
       options:
