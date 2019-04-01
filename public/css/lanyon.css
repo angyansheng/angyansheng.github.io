@@ -219,8 +219,7 @@ blockquote p:last-child {
 /* Images */
 img {
   display: block;
-  height: 50%;
-  width: 50%;
+  width: 100%;
   object-fit: contain;
   margin: 0 auto 1rem;
   border-radius: 5px;
