@@ -97,7 +97,7 @@ This identity is known as the __Dirichlet hyperbola method__, since it depends o
 
 The example we gave in the previous section is the case when $g\equiv h\equiv1$. In this case, we have $f=1* 1=d$, the [number-of-divisors function](https://en.wikipedia.org/wiki/Divisor_function) (sometimes written $\tau$). Hence we can interpret the result as the asymptotic for the partial sums of the number-of-divisors function,
 
-$$\sum_{x\leq N}d(x)=N\log N+(2\gamma-1)N+O(\sqrt N).$$
+$$\boxed{\sum_{n\leq N}d(n)=N\log N+(2\gamma-1)N+O(\sqrt N).}$$
 
 ## More examples
 
@@ -112,7 +112,7 @@ $$\begin{aligned}
 
 By some experimentation, we see that we cannot do better than setting $u=1$, $v=N$, which yields
 
-$$\sum_{n\leq N}\sigma(n)=\frac{\zeta(2)}2N^2+O(N\ln N).$$
+$$\boxed{\sum_{n\leq N}\sigma(n)=\frac{\zeta(2)}2N^2+O(N\ln N).}$$
 
 For another example, we will compute the asymptotic for partial sums of $\varphi$, the [Euler totient function](https://en.wikipedia.org/wiki/Euler%27s_totient_function). It is well-known that $\varphi* 1=\Id$ (proof sketch: consider the denominators of the fractions $\\{\frac1n,\frac2n,\ldots,\frac nn\\}$ when reduced to lowest terms), so by [Möbius inversion](https://en.wikipedia.org/wiki/M%C3%B6bius_inversion_formula) we have $\varphi=\Id* \mu$, where $\mu$ is the [Möbius function](https://en.wikipedia.org/wiki/M%C3%B6bius_function). We now apply the Dirichlet hyperbola method with $u=1^-$, $v=N^+$ to obtain
 
@@ -141,4 +141,4 @@ $$\sum_{n=1}^\infty\frac{\mu(n)}{n^s}=\frac1{\zeta(s)},$$
 
 so $s=2$ gives $C=\frac1{\zeta(2)}$. Hence
 
-$$\sum_{n\leq N}\varphi(n)=\frac1{2\zeta(2)}N^2+O(N\ln N).$$
+$$\boxed{\sum_{n\leq N}\varphi(n)=\frac1{2\zeta(2)}N^2+O(N\ln N).}$$

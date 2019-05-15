@@ -119,7 +119,7 @@ Now if there is a linear relation among $\\{\overline u_1,\ldots,\overline u_{n'
 
 $$0\neq\det(\overline a_{ij})=\det(a_{ij})\pmod{\mf m},$$
 
-so $\det(a_{ij})$ is a unit of $A$. Then the inverse of $\det(a_{ij})$ is given by Cramer's formula. $\qed$
+so $\det(a_{ij})$ is a unit of $A$. Then the inverse of $(a_{ij})$ is given by Cramer's formula. $\qed$
 
 __Proposition__: Let $M$ be a finite $A$-module. If $f:M\to M$ is a surjective $A$-linear map, then $f$ is also injective (so it is an automorphism of $M$).
 

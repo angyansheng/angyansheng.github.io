@@ -3,6 +3,7 @@ title: 'Algebraic Number Theory (III): Algebraic Integers'
 layout: post
 date: 2019-02-08 09:12:03 +0800
 tag: [algebraic number theory]
+series-order: 3
 ---
 
 In this post, we study the _algebraic integers_, which are algebraic numbers with certain "integrality" properties, analogous to the integers $\bb Z$ within the rationals $\bb Q$.

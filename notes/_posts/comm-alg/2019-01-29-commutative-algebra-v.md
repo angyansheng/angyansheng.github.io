@@ -65,7 +65,7 @@ By the second isomorphism theorem, for all $i$ we have
 
 $$\frac{N\cap M_i}{N\cap M_{i+1}}=\frac{N\cap M_i}{(N\cap M_i)\cap M_{i+1}}\cong\frac{(N\cap M_i)+M_{i+1}}{M_{i+1}},$$
 
-which is a submodule of the simple module $M_i/M_{i+1}$. Hence $N\cap M_i/N\cap M_{i+1}$ is either zero or simple for all $i$.
+which is a submodule of the simple module $M_i/M_{i+1}$. Hence $\frac{N\cap M_i}{N\cap M_{i+1}}$ is either zero or simple for all $i$.
 
 Now by removing repetitions from the chain $(* )$, we get a composition series for $N$ with length at most $l$. Thus $\ell(N)\leq l$.
 

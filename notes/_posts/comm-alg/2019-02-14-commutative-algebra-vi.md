@@ -26,7 +26,7 @@ __Proof__: ($1\Rightarrow2$) The contrapositive is clear: if $x_1< x_2<\cdots$ i
 
 The equivalent conditions above are called the __ascending chain condition (a.c.c.)__ for a partially ordered set $\Gamma$. By reversing the order, we define the __descending chain condition (d.c.c.)__ analogously.
 
-__Proposition__: If $\Gamma$ satisfies a.c.c. (resp. d.c.c) and $\Gamma'\subseteq\Gamma$, then $\Gamma'$ also satisfies a.c.c. (resp. d.c.c.).
+__Proposition__: If $\Gamma$ satisfies a.c.c. (resp. d.c.c.) and $\Gamma'\subseteq\Gamma$, then $\Gamma'$ also satisfies a.c.c. (resp. d.c.c.).
 
 __Proof__: Every nonempty $S\subseteq\Gamma$ has a maximal (resp. minimal) element; in particular, so does every nonempty $S\subseteq\Gamma'$. $\qed$
 

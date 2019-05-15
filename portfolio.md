@@ -4,7 +4,15 @@ title: Portfolio
 sidebar_order: 2.5
 ---
 
+## CV
+
+__Curriculum Vitae__ ([pdf]({{site.baseurl}}/assets/cv_2018.pdf))
+
 ## Presentations
+
+__Bicuspidal Geodesics on Punctured Hyperbolic Surfaces__ ([pdf]({{site.baseurl}}/assets/Y4S2/FYP_final_talk_handout.pdf))\\
+Final Year Project final talk, 50 mins\\
+Mar 2019
 
 __Bicuspidal Geodesics on Punctured Hyperbolic Surfaces__ ([pdf]({{site.baseurl}}/assets/Y4S2/FYP_midterm_talk_handout.pdf))\\
 Final Year Project midterm talk, 35 mins\\
@@ -66,7 +74,7 @@ __Hatcher's _Algebraic Topology___ ([pdf]({{site.baseurl}}/assets/Y2S2/review_re
 MA4266 Topology review report\\
 Apr 2017
 
-
+{% comment %}
 ## Essays
 
 ### USE2312 Nationalism and the Arts
@@ -95,3 +103,4 @@ Feb 2016
 
 __Final essay__ ([pdf]({{site.baseurl}}/assets/Y1S1/UQF2101G_essay.pdf))\\
 Nov 2015
+{% endcomment %}

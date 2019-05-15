@@ -3,6 +3,7 @@ title: 'Algebraic Number Theory (II): Number Fields'
 layout: post
 date: 2019-01-25 17:08:43 +0800
 tag: [algebraic number theory]
+series-order: 2
 ---
 
 A __number field__ $K$ is a subfield of $\bb C$ which is a finite extension of $\bb Q$. These are the main objects of study of algebraic number theory. In this post, we look at some basic examples and properties, and define the _trace_ and _norm_ functions in number fields.

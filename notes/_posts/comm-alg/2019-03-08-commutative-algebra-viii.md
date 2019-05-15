@@ -15,7 +15,7 @@ We have arrived at one of the central objects of algebraic geometry, the spectru
 
 ## Motivation: algebraic geometry
 
-First, we cover some motivation for the definition of the spectrum from algebraic geometry. The reader may skip this introductory section and proceed straight to the <a href="#spectrum-of-a-ring">definition of the spectrum</a> (__but__ see the note at the end of this section).
+First, we cover some motivation for the definition of the spectrum from algebraic geometry. The reader may skip this introductory section and proceed straight to the <a href="#spectrum-of-a-ring">definition of the spectrum</a>.
 
 We will get a lot of mileage out of the following philosophy:
 
@@ -58,9 +58,9 @@ From the discussion above, we want $\Spec(A)$ to have the following nice propert
 
 We note that $\maxSpec$ actually does not work, because it fails to be functorial: this is essentially because the inverse image of a maximal ideal under a ring homomorphism might not be maximal. However, by replacing "maximal" with "prime" we circumvent this problem, and this turns out to be the right generalisation.
 
-__Note__: Since the definition of the spectrum is motivated by the specific case of coordinate rings in algebraic geometry, it will be very helpful to keep the examples $A=\bb C[X_1,\ldots,X_n]$ or $A=\bb C[V]$ in mind from this point on.
-
 ## Spectrum of a ring
+
+__Note__: Since the definition of the spectrum is motivated by the specific case of coordinate rings in algebraic geometry, it will be very helpful to keep the examples $A=\bb C[X_1,\ldots,X_n]$ or $A=\bb C[V]$ in mind from this point on.
 
 Let $A$ be a (commutative unital) ring. The __(prime) spectrum of $A$__, denoted $\Spec(A)$, is the set of all prime ideals of $A$.
 
@@ -88,8 +88,8 @@ $$V\left(\bigcup_{i\in I}E_i\right)=\bigcap_{i\in I}V(E_i).$$
 __Proof__: Note that
 
 $$\begin{aligned}
-\mf p\in V\left(\bigcup_{i\in I}E_i\right)&\iff\mf p\in V(E_i)\text{ for all }i\\
-&\iff E_i\subseteq\mf p\text{ for all }i\\
+\mf p\in V\left(\bigcup_{i\in I}E_i\right)&\iff E_i\subseteq\mf p\text{ for all }i\\
+&\iff\mf p\in V(E_i)\text{ for all }i\\
 &\iff\mf p\in\bigcap_{i\in I}V(E_i).\ \qed
 \end{aligned}$$
 
@@ -107,7 +107,7 @@ In the other direction, suppose that $\mf p\in V(\mf a\mf b)$, so $\mf a\mf b\su
 
 Hence we have shown that the family of sets
 
-$$\{V(E)\,:\,E\subseteq A\}\subseteq\Spec(A)$$
+$$\{V(E)\,:\,E\subseteq A\}\subseteq\mc P(\Spec(A))$$
 
 contains $\emptyset$ and $\Spec A$, and is closed under arbitrary intersection and finite union. Thus this family of sets are the closed sets for a topology on $\Spec(A)$, known as the __Zariski topology__.
 

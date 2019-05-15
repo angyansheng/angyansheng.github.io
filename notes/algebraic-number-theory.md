@@ -7,7 +7,7 @@ Algebraic number theory is concerned with __number fields__, finite extensions o
 
 These notes follow the graduate course MA5202 Number Theory, offered in AY2018/19 Semester 2 by Prof Chin Chee Whye. The main text for this course is D. A. Marcus, _Number Fields_, 2nd ed. (2018).
 
-{% assign post_list = site.categories.notes | where_exp:"x","x.tags contains 'algebraic number theory'" | reverse %}
+{% assign post_list = site.categories.notes | where_exp:"x","x.tags contains 'algebraic number theory'" | sort:"series-order" %}
 <ul class="posts">
 	{% for post in post_list -%}
 		<li><a href="{{ post.url }}">{{ post.title }}</a></li>

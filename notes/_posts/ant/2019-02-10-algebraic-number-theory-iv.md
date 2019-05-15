@@ -3,6 +3,7 @@ title: 'Algebraic Number Theory (IV): Number Rings'
 layout: post
 date: 2019-02-10 10:16:43 +0800
 tag: [algebraic number theory]
+series-order: 4
 macros: >-
   "\\disc":"\\operatorname{disc}",
 ---

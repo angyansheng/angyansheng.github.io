@@ -3,6 +3,7 @@ title: 'Algebraic Number Theory (I): First Examples'
 layout: post
 date: 2019-01-21 23:21:35 +0800
 tag: [algebraic number theory]
+series-order: 1
 ---
 
 In this post, we look at two specific examples of number rings, and investigate how their ring theoretic properties translate into number theory.
@@ -153,7 +154,7 @@ gives the desired form for $z$. Any common factor of $m$ and $n$ also divides $x
 
 We can make an analogous construction with the cube root of unity $\omega=e^{2\pi i/3}$, to obtain the ring of __Eisenstein integers__, given by
 
-$$\bb Z[\omega]=\\{a+b\omega\,:\,a,b\in\bb Z\\}.$$
+$$\bb Z[\omega]=\{a+b\omega\,:\,a,b\in\bb Z\}.$$
 
 Note that $\omega^3=1$ implies $\omega^2+\omega+1=0$. We also have $\overline\omega=\omega^2$.
 

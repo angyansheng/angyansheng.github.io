@@ -79,15 +79,15 @@ $$(gf)^* =f^* g^* .$$
 
 __Proof__: This follows from $f^{-1}(g^{-1}(\mc p))=(gf)^{-1}(\mc p)$. $\qed$
 
-__Proposition__: Let $\mf a\subseteq A$ be an ideal. Then $(\phi^* )^{-1}(V(\mf a))=V(\phi(\mf a))$.
+__Proposition__: Let $\mf a\subseteq A$ be an ideal. Then $(\phi^* )^{-1}(V_A(\mf a))=V_B(\phi(\mf a))$.
 
 __Proof__: For any $\mf q\in Y$, ie. $\mf q\subseteq B$ a prime ideal, we have
 
 $$\begin{aligned}
-\mf q\in(\phi^* )^{-1}(V(\mf a))&\iff\phi^* (\mf q)\in V(\mf a)\\
+\mf q\in(\phi^* )^{-1}(V_A(\mf a))&\iff\phi^* (\mf q)\in V_A(\mf a)\\
 &\iff\mf a\subseteq\phi^{-1}(\mf q)\\
 &\iff\phi(\mf a)\subseteq\mf q\\
-&\iff\mf q\in V(\phi(\mf a)).\ \qed
+&\iff\mf q\in V_B(\phi(\mf a)).\ \qed
 \end{aligned}$$
 
 __Corollary__: $\phi^* $ is a continuous map.
@@ -110,7 +110,7 @@ $$\begin{aligned}
 &f\not\in\mf p\text{ for some }\mf p\subseteq A\text{ prime}\\
 &\implies f\not\in\nil(A)\\
 &\implies f^n\not\in\nil(A)\text{ for all }n\geq1\\
-&\implies\phi(f)\neq0\text{ for all }n\geq1\\
+&\implies\phi(f)^n\neq0\text{ for all }n\geq1\\
 &\implies\phi(f)\not\in\nil(B)\\
 &\implies\phi(f)\not\in\mf q\text{ for some }\mf q\subseteq B\text{ prime}\\
 &\implies f\not\in\phi^{-1}(\mf q)=\phi^* (\mf q)\\
@@ -130,36 +130,36 @@ $$\begin{aligned}
 
 Now $f\not\in\nil(A)$, so $X_f$ is a nonempty open set in $X$. Hence $\phi^* (Y)$ is not dense in $X$. $\qed$
 
-__Proposition__: Suppose that $\phi$ is surjective. Then $\phi^* $ is a homeomorphism of $Y$ onto $V_X(\ker\phi)\subseteq X$.
+__Proposition__: Suppose that $\phi$ is surjective. Then $\phi^* $ is a homeomorphism of $Y$ onto $V_A(\ker\phi)\subseteq X$.
 
 __Proof__: Note that $B\cong A/\ker\phi$. By the lattice isomorphism theorem, there is a correspondence
 
 $$\begin{aligned}
-Y=\left\{\begin{gathered}\text{prime ideals}\\\text{in }B\end{gathered}\right\}&\leftrightarrow\left\{\begin{gathered}\text{prime ideals in }A\\\text{containing }\ker\phi\end{gathered}\right\}=V_X(\ker\phi)\\
+Y=\left\{\begin{gathered}\text{prime ideals}\\\text{in }B\end{gathered}\right\}&\leftrightarrow\left\{\begin{gathered}\text{prime ideals in }A\\\text{containing }\ker\phi\end{gathered}\right\}=V_A(\ker\phi)\\
 \mf q\quad&\mapsto\quad\phi^* (\mf q)\\
 \phi(\mf p)\quad&\gets\quad\mf p,
 \end{aligned}$$
 
-so $\phi^* :Y\to V_X(\ker\phi)$ is a continuous bijection.
+so $\phi^* :Y\to V_A(\ker\phi)$ is a continuous bijection.
 
 Moreover, this correspondence is inclusion-preserving, so for any ideal $\mf b\subseteq B$, the ideals containing $\mf b$ correspond exactly to the ideals containing $\phi^* (\mf b)$. In other words,
 
-$$\phi^* (V_Y(\mf b))=V_X(\phi^* (\mf b)),$$
+$$\phi^* (V_B(\mf b))=V_A(\phi^* (\mf b)),$$
 
-so $\phi^* $ maps every closed set in $Y$ to a closed set in $V_X(\ker\phi)$. Hence $\phi^* $ is a homeomorphism. $\qed$
+so $\phi^* $ maps every closed set in $Y$ to a closed set in $V_A(\ker\phi)$. Hence $\phi^* $ is a homeomorphism. $\qed$
 
 __Corollary__: $\Spec(A)$ and $\Spec(A/\nil(A))$ are naturally homeomorphic.
 
 __Theorem__: For any ideal $\mf b\subseteq B$, we have
 
-$$\overline{\phi^* (V_Y(\mf b))}=V_X(\phi^* (\mf b)).$$
+$$\overline{\phi^* (V_B(\mf b))}=V_A(\phi^* (\mf b)).$$
 
-__Proof__: Note that the composition $A\overset\phi\to B\twoheadrightarrow B/\mf b$ has kernel $\phi^* (\mf b)$, so we have the induced map $\overline\phi$ in the following commutative diagram:
+__Proof__: Note that the composition $A\overset\phi\to B\twoheadrightarrow B/\mf b$ has kernel $\phi^* (\mf b)$, so we have the induced map $\tilde\phi$ in the following commutative diagram, which is injective:
 
 $$\begin{matrix}
 A&\overset\phi\longrightarrow&B\\
 \bigg\downarrow&&\bigg\downarrow\\
-A/\phi^* (\mf b)&\underset{\overline\phi}\longrightarrow&B/\mf b
+A/\phi^* (\mf b)&\underset{\tilde\phi}\longrightarrow&B/\mf b
 \end{matrix}$$
 
 Now applying the $\Spec$ functor gives the following commutative diagram:
@@ -168,9 +168,9 @@ $$\def\ua#1{\bigg\uparrow\raisebox{.5ex}{\mathrlap{$\scriptstyle{#1}$}}}
 \begin{matrix}
 X&\overset{\phi^* }\longleftarrow&Y\\
 \ua{\subseteq}&&\ua{\subseteq}\\
-V_X(\phi^* (\mf b))&&V_Y(\mf b)\\
+V_A(\phi^* (\mf b))&&V_B(\mf b)\\
 \ua{* }&&\ua{* }\\
-\Spec(A/\phi^* (\mf b))&\overset{\overline\phi^* }\longleftarrow&\Spec(B/\mf b)
+\Spec(A/\phi^* (\mf b))&\overset{\tilde\phi^* }\longleftarrow&\Spec(B/\mf b)
 \end{matrix}$$
 
-Now by the previous two results, the starred maps are homeomorphisms, and the image of $\overline\phi^* $ is dense in the codomain. Hence $\phi^* $ maps $V_Y(\mf b)$ into $V_X(\phi^* (\mf b))$ with dense image, as desired. $\qed$
+Now by the previous two results, the starred maps are homeomorphisms, and the image of $\tilde\phi^* $ is dense in the codomain (since $\ker\tilde\phi=\\{0\\}$). Hence $\phi^* $ maps $V_B(\mf b)$ into $V_A(\phi^* (\mf b))$ with dense image, as desired. $\qed$
